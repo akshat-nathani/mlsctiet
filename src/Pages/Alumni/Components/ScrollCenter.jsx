@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styles from "../Style/scroll.module.css";
 import ProfileCards from './ProfileCards';
 import YearSelector from './YearSelector';
+import AlumniSvg from "../Assets/alumni_vector.svg";
+import MeetVector from "../Assets/meet_vector.svg";
 
 const imageData = [
   {
@@ -75,20 +77,24 @@ function ScrollCenter({ currentYear }) {
         </div>
       ))}
     </div>
-          <div className={styles.Alumnicap}>
-            <div className={styles.vl}></div>
-            <div className={styles.caption}>Alumni</div>
-            <div className={styles.hl}></div>  
-          </div>
+        <div className={styles.Alumnicap}>
+          <img src={AlumniSvg} alt="Alumni" />
+        </div>
       </div>
      </div>
      {currentYear === 2022 && (
           <div>
+            <div className={styles.meetAlumni}>
+              <img src={MeetVector} alt="MeetAlumni" />
+            </div>
             <ProfileCards data={profileData} />
           </div>
         )}
         {currentYear === 2023 && (
           <div>
+            <div className={styles.meetAlumni}>
+              <img src={MeetVector} alt="MeetAlumni" />
+            </div>
             <ProfileCards data={profileData} />
           </div>
         )}
